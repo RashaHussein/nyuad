@@ -1,0 +1,9 @@
+<div ng-repeat="(messageId,message) in messages">
+  <span>{{ message.content }}</span>
+  <span><a ng-click="deleteMessage(messageId)">delete</a></span>
+</div>
+
+<form ng-submit="sendMessage()">
+  <input type="textarea" ng-model="message.content" />
+  <input type="submit" value="Send" />
+</form>
